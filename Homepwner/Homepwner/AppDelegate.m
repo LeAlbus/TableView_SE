@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SEItemsTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    //Cria a view controller de SEItemTableViewController
+    SEItemsTableViewController *itemsViewController = [[SEItemsTableViewController alloc]init];
+    
+    //Posicionando a ItemView na hierarquia da janela
+    self.window.rootViewController = itemsViewController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0335E6E1AE03B26009C2951 /* SEItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0335E6D1AE03B26009C2951 /* SEItemsTableViewController.m */; };
 		A0C0C0881AE02CD800447F1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0C0871AE02CD800447F1C /* main.m */; };
 		A0C0C08B1AE02CD800447F1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0C08A1AE02CD800447F1C /* AppDelegate.m */; };
 		A0C0C08D1AE02CD800447F1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0C08C1AE02CD800447F1C /* Images.xcassets */; };
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0335E6C1AE03B26009C2951 /* SEItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEItemsTableViewController.h; sourceTree = "<group>"; };
+		A0335E6D1AE03B26009C2951 /* SEItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEItemsTableViewController.m; sourceTree = "<group>"; };
 		A0C0C0821AE02CD800447F1C /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C0C0861AE02CD800447F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0C0C0871AE02CD800447F1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 			children = (
 				A0C0C0891AE02CD800447F1C /* AppDelegate.h */,
 				A0C0C08A1AE02CD800447F1C /* AppDelegate.m */,
+				A0335E6C1AE03B26009C2951 /* SEItemsTableViewController.h */,
+				A0335E6D1AE03B26009C2951 /* SEItemsTableViewController.m */,
 				A0C0C08C1AE02CD800447F1C /* Images.xcassets */,
 				A0C0C08E1AE02CD800447F1C /* LaunchScreen.xib */,
 				A0C0C0851AE02CD800447F1C /* Supporting Files */,
@@ -211,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C0C08B1AE02CD800447F1C /* AppDelegate.m in Sources */,
+				A0335E6E1AE03B26009C2951 /* SEItemsTableViewController.m in Sources */,
 				A0C0C0881AE02CD800447F1C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +404,7 @@
 				A0C0C0A11AE02CD900447F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0C0C0A21AE02CD900447F1C /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +413,7 @@
 				A0C0C0A41AE02CD900447F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
