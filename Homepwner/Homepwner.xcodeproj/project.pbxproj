@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A017DD9C1AE04E86007AD372 /* SEItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A017DD9B1AE04E86007AD372 /* SEItem.m */; };
 		A0335E6E1AE03B26009C2951 /* SEItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0335E6D1AE03B26009C2951 /* SEItemsTableViewController.m */; };
 		A0C0C0881AE02CD800447F1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0C0871AE02CD800447F1C /* main.m */; };
 		A0C0C08B1AE02CD800447F1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0C08A1AE02CD800447F1C /* AppDelegate.m */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A017DD9A1AE04E86007AD372 /* SEItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEItem.h; sourceTree = "<group>"; };
+		A017DD9B1AE04E86007AD372 /* SEItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEItem.m; sourceTree = "<group>"; };
 		A0335E6C1AE03B26009C2951 /* SEItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEItemsTableViewController.h; sourceTree = "<group>"; };
 		A0335E6D1AE03B26009C2951 /* SEItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEItemsTableViewController.m; sourceTree = "<group>"; };
 		A0C0C0821AE02CD800447F1C /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,8 @@
 			children = (
 				A0C0C0891AE02CD800447F1C /* AppDelegate.h */,
 				A0C0C08A1AE02CD800447F1C /* AppDelegate.m */,
+				A017DD9A1AE04E86007AD372 /* SEItem.h */,
+				A017DD9B1AE04E86007AD372 /* SEItem.m */,
 				A0335E6C1AE03B26009C2951 /* SEItemsTableViewController.h */,
 				A0335E6D1AE03B26009C2951 /* SEItemsTableViewController.m */,
 				A0C0C08C1AE02CD800447F1C /* Images.xcassets */,
@@ -217,6 +222,7 @@
 			files = (
 				A0C0C08B1AE02CD800447F1C /* AppDelegate.m in Sources */,
 				A0335E6E1AE03B26009C2951 /* SEItemsTableViewController.m in Sources */,
+				A017DD9C1AE04E86007AD372 /* SEItem.m in Sources */,
 				A0C0C0881AE02CD800447F1C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
