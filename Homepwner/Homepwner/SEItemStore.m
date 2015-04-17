@@ -15,29 +15,27 @@
 + (instancetype)sharedStore
 {
     static SEItemStore *sharedStore = nil;
-    // Preciso criar um sharedStore?
-    if (!sharedStore)
-    {
+    // Do I need to create a sharedStore?
+    if (!sharedStore) {
         sharedStore = [[self alloc] initPrivate];
     }
     return sharedStore;
 }
-//Erro na tentativa de alocar e iniciar outro ItemStore
+// Se alguem tenta chamar o itemstore, mostrar esse erro
 
 - (instancetype)init
 {
     @throw [NSException exceptionWithName:@"Singleton"
-                                   reason:@"Use +[SEItemStore sharedStore]"
+                                   reason:@"Use +[BNRItemStore sharedStore]"
                                  userInfo:nil];
     return nil;
-    {
-       
-        // Here is the real (secret) initializer
-        - (instancetype)initPrivate
-        {
-            self = [super init];
-            return self;
-        }
-    }
 }
+
+// Inicializer de verdade
+- (instancetype)initPrivate
+{
+    self = [super init];
+    return self;
+}
+    
 @end
