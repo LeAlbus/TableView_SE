@@ -50,6 +50,8 @@
 
 #pragma mark - Table view data source
 
+//Os métodos numberOfRowsInSection e cellForRowAtIndexPath são obrigatórios
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
@@ -57,9 +59,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+
+    //retorna o numero de linhas exibidas
+    return [[[SEItemStore sharedStore] allItems] count];
 }
 
 /*
