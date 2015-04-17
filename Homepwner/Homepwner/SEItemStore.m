@@ -9,19 +9,34 @@
 
 //Essa classe é um Singleton
 #import "SEItemStore.h"
+#import "SEItem.h"
+
+@interface SEItemStore ()
+
+@property (nonatomic) NSMutableArray *privateItems;
+
+@end
 
 @implementation SEItemStore
 
 + (instancetype)sharedStore
 {
     static SEItemStore *sharedStore = nil;
-    // Do I need to create a sharedStore?
+    // checa se já existe um sharedStore
     if (!sharedStore) {
         sharedStore = [[self alloc] initPrivate];
     }
     return sharedStore;
 }
-// Se alguem tenta chamar o itemstore, mostrar esse erro
+
+- (SEItem *)criaItem
+{
+    SEItem *item = [SEItem randomItem];
+    [self.privateItems addObject:item];
+    return item;
+}
+
+// Se alguem tenta chamar um sharedstore, mostrar esse erro
 
 - (instancetype)init
 {
@@ -35,7 +50,17 @@
 - (instancetype)initPrivate
 {
     self = [super init];
+    if (self){
+        _privateItems = [[NSMutableArray alloc] init];
+    }
     return self;
+}
+
+- (NSArray *)allItems
+{
+    return self.privateItems;
+    //Caso quisesse sobrescrever para retornar uma cópia imutável, ficaria:
+    //return [self.privateItems copy];
 }
     
 @end

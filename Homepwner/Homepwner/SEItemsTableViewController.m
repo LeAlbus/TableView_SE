@@ -7,6 +7,8 @@
 //
 
 #import "SEItemsTableViewController.h"
+#import "SEItemStore.h"
+#import "SEItem.h"
 
 @interface SEItemsTableViewController ()
 
@@ -28,8 +30,14 @@
 {
     // Chama o inicializer da superclasse
     self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+        for (int i = 0; i < 5; i++) {
+            [[SEItemStore sharedStore] criaItem];
+        }
+    }
     return self;
 }
+
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [self init];
@@ -43,13 +51,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }

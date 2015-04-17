@@ -10,8 +10,13 @@
 //Essa classe é um singleton
 #import <Foundation/Foundation.h>
 
+@class SEItem;
+
 @interface SEItemStore : NSObject
 
+@property (nonatomic, readonly) NSArray *allItems;
+
 + (instancetype)sharedStore;
+-(SEItem *) criaItem;
 
 @end
