@@ -52,27 +52,37 @@
 
 //Os métodos numberOfRowsInSection e cellForRowAtIndexPath são obrigatórios
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
+//ESSE MÉTODO PRECISA SER REMOVIDO PARA TABELAS SEM SEÇÃO
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
-
+*/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     //retorna o numero de linhas exibidas
     return [[[SEItemStore sharedStore] allItems] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+   
+    // Cria uma instancia UITableViewCell, com aparencia padrão
+    UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                  reuseIdentifier:@"UITableViewCell"];
     
-    // Configure the cell...
+    // seta o texto da célula para ser o mesmo do index de itens
+    // onde n = row
+    // Essa célua aparece na tableview
     
+    NSArray *items = [[SEItemStore sharedStore] allItems];
+    SEItem *item = items[indexPath.row];
+    cell.textLabel.text = [item description];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
