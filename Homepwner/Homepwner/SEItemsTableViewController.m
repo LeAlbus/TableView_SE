@@ -34,9 +34,10 @@
 - (instancetype)init
 {
     // Chama o inicializer da superclasse
+    //quantidadeDeCelulasCriadas
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 50; i++) {
             [[SEItemStore sharedStore] criaItem];
         }
     }
@@ -53,12 +54,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+//#pragma mark - Table view data source
 
 //Os métodos numberOfRowsInSection e cellForRowAtIndexPath são obrigatórios
 
 
-//ESSE MÉTODO PRECISA SER REMOVIDO PARA TABELAS SEM SEÇÃO
+//ESSE MÉTODO PRECISA SER REMOVIDO PARA TABELAS PLANAS
+
 /*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
