@@ -16,8 +16,13 @@
 
 @implementation SEItemsTableViewController
 
-- (void)viewDidLoad {
+
+    
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"UITableViewCell"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -31,7 +36,7 @@
     // Chama o inicializer da superclasse
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 20; i++) {
             [[SEItemStore sharedStore] criaItem];
         }
     }
@@ -70,8 +75,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     // Cria uma instancia UITableViewCell, com aparencia padrão
-    UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                  reuseIdentifier:@"UITableViewCell"];
+   // UITableViewCell *cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                //  reuseIdentifier:@"UITableViewCell"];
+    
+    // cria uma célula nova OU recicla uma célula
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                                                            forIndexPath:indexPath];
     
     // seta o texto da célula para ser o mesmo do index de itens
     // onde n = row
